@@ -1,13 +1,9 @@
 #include <stdio.h>
 
 int main(int argc, char *argv[]) {
-    int second;
-    int minute;
+    int year;
 
-    scanf("%i", &second);
+    scanf("%i", &year);
 
-    minute = second / 60;
-    second = second % 60;
-
-    printf("%i:%02i", minute, second);
+    printf("%i", (year % 4 == 0 && year % 100 != 0) || year % 400 == 0);
 }
